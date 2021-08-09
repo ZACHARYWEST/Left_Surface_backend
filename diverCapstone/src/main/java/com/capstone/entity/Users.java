@@ -41,9 +41,20 @@ public class Users {
 	@Column(name="password")
 	private String password;
 	
+	@Column(name="profile_pic")
+	private String profilePic;
 	
 	
 	
+	
+	public String getProfilePic() {
+		return profilePic;
+	}
+
+	public void setProfilePic(String profilePic) {
+		this.profilePic = profilePic;
+	}
+
 	public int getId() {
 		return id;
 	}
