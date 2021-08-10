@@ -30,6 +30,7 @@ public class UserController {
 
 	@RequestMapping(value="/saveUser", consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE, method=RequestMethod.POST)
 	public void submitUserDetails(@RequestBody Users user) {
+		user.setProfilePic("../../assets/images/profilePictures/profile1.png");
 		userRepository.save(user);
 		String message = "Thank you, "+ user.getfName() + " " + user.getlName() +", for creating your account at Left Surface!\n\n"
 				+ "You can log in now using your email and your password:\n"
